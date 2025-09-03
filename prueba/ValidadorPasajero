@@ -1,0 +1,9 @@
+package com.guia2;
+
+public class ValidadorPasajero {
+    public void validar(Pasajero pas) throws EdadMinimaException{
+        if (pas.getEdad() <18){
+            throw new EdadMinimaException("El pasajero es menor de 18 años.");
+        }
+    }
+}
