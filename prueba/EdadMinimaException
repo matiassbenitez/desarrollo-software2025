@@ -1,0 +1,7 @@
+package com.guia2;
+
+public class EdadMinimaException extends Exception {
+    public EdadMinimaException(String message){
+        super(message);
+    }
+}
