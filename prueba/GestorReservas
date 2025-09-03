@@ -1,0 +1,17 @@
+package com.guia2;
+
+import java.time.LocalDate;
+
+public class GestorReservas {
+    private final String DEFAULT_FILE_PATH = "C:\\Users\\st\\Documents\\repo matias";
+
+    public String getPath() {
+        return this.DEFAULT_FILE_PATH;
+    }
+
+    public Reserva crearReserva(Pasajero pas, Habitacion hab, LocalDate llegada, LocalDate partida){
+        //validar todo
+        hab.setEstado("NO_DISPONIBLE/OCUPADA");
+        return new Reserva(pas, hab, llegada, partida);
+    }
+}
