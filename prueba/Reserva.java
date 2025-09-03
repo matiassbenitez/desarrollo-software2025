@@ -1,20 +1,26 @@
 package com.guia2;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 public class Reserva {
+    private UUID id;
     private Pasajero pas;
     private Habitacion hab;
     private LocalDate llegada;
     private LocalDate partida;
 
     public Reserva(Pasajero pas, Habitacion hab, LocalDate llegada, LocalDate partida) {
+        this.id = UUID.randomUUID();
         this.pas = pas;
         this.hab = hab;
         this.llegada = llegada;
         this.partida = partida;
     }
     
+    public UUID getId(){
+        return id;
+    }
     public Pasajero getPas() {
         return pas;
     }
